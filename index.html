@@ -56,6 +56,16 @@
         outline: 0;
         box-shadow: 0 0 0 0rem !important;
       }
+
+      /* responsive logo img, slightly modified to height instead, with nax-width % limiting width .. thanks to: https://stackoverflow.com/questions/33929604/fit-image-to-bootstrap-navbar-height-responsively */
+      .navbar .navbar-brand {
+        padding-top: 0px !important;
+      }
+      .navbar .navbar-brand img {
+        max-width: 100% !important;
+      }
+
+      /* right justification thanks to: https://stackoverflow.com/questions/54394243/bootstrap-4-navbar-justify-menu-to-right .. also in docs: https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content */
     </style>
 
     <!-- original bs cdn -->
@@ -72,16 +82,16 @@
     <div class="bs5">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <a style="max-width:50%;" class="navbar-brand" href="#"><img src="https://fakeimg.pl/404x59/465157/EAE0D0/?font_size=30&text=logo&font=lato"></a>
+          <button style="max-width:50%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link active" aria-current="page" href="#"><img src="https://fakeimg.pl/109x35/465157/EAE0D0/?font_size=30&text=signin&font=lato"></a>
+              <a class="nav-link" href="#"><img src="https://fakeimg.pl/119x58/465157/EAE0D0/?font_size=30&text=cart&font=lato"></a>
+              <a class="nav-link" href="#"><img src="https://fakeimg.pl/372x52/465157/EAE0D0/?font_size=30&text=location&font=lato"></a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img src="https://fakeimg.pl/164x60/465157/EAE0D0/?font_size=30&text=approval&font=lato"></a>
             </div>
           </div>
         </div>
