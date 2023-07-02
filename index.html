@@ -107,7 +107,46 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color:#253646 !important;">
         <div class="container-fluid">
 
-          <a style="max-width:50%;" class="navbar-brand" href="#"><img src="https://fakeimg.pl/404x59/465157/EAE0D0/?font_size=18&text=logo&font=lato"></a>
+          <div style="max-width:50%;padding:0px !important;margin:0px !important;" class="navbar-brand">
+            <!-- IMG MAP OF HEADER LOGO HERE (FROM MIVA + IMG MAP .. DYNAMIC DISABLED, removed lots of miva dynamic data tags that insert logo name and logo tagline, see lines 88-110 in originsl_header.html), so not sure mvt:if and mvt:else are even functional .. dimensions 404w 59h -->
+            <!-- REPLACEMENT IMG IF .. svg not showing fix thanks to: https://stackoverflow.com/questions/58848205/responsive-svg-not-showing-full-version-at-larger-screen-sizes (added width and height to svg tag) -->
+            <mvt:if expr="l.settings:page:code EQ 'SFNT'">
+              <!-- changed <h1> to <div> as <h1> had a padding or margin that cause 4-5px blip on other page logos after clicking logo image map -->
+
+              <div style="z-index:1000 !important;background-color:#20303D !important;position:relative;max-width:404px !important;height:100%;padding:0;margin:0;">
+                    <!-- SVG BEGIN .. IMG MAP WILL BE RESPONSIVE BCS IT'S IN AN SVG CONTAINER -->
+                    <svg width="100%" height="59" style="background-color:#20303D !important;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 404 59">
+                      <image width="404" height="59" xlink:href="https://decadentalstore.com/mm5/graphics/00000001/1/Deca_Ideal_Logo_Color_edited.png" style="background-color:#20303D !important;"></image> 
+                      <a xlink:href="https://decadentalstore.com/deca-store-front.html">
+                        <rect x="0" y="0" fill="#fff" opacity="0" width="200" height="59"></rect>
+                      </a>
+                      <a xlink:href="https://decadentalstore.com/ideal-store-front.html">
+                        <rect x="208" y="0" fill="#fff" opacity="0" width="200" height="59"></rect>
+                      </a>
+                    </svg>
+              </div>
+
+            <!-- / REPLACEMENT IMG IF -->
+            <!-- REPLACEMENT IMG ELSE -->
+            <mvt:else>
+
+              <div style="z-index:1000 !important;background-color:#20303D !important;position:relative;max-width:404px !important;height:100%;padding:0;margin:0;">
+                    <!-- SVG BEGIN .. IMG MAP WILL BE RESPONSIVE BCS IT'S IN AN SVG CONTAINER -->
+                    <svg width="100%" height="59" style="background-color:#20303D !important;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 404 59">
+                      <image width="404" height="59" xlink:href="https://decadentalstore.com/mm5/graphics/00000001/1/Deca_Ideal_Logo_Color_edited.png" style="background-color:#20303D !important;"></image> 
+                      <a xlink:href="https://decadentalstore.com/deca-store-front.html">
+                        <rect x="0" y="0" fill="#fff" opacity="0" width="200" height="59"></rect>
+                      </a>
+                      <a xlink:href="https://decadentalstore.com/ideal-store-front.html">
+                        <rect x="208" y="0" fill="#fff" opacity="0" width="200" height="59"></rect>
+                      </a>
+                    </svg>
+              </div>
+
+            </mvt:if>
+            <!-- / REPLACEMENT IMG ELSE -->
+            <!-- / IMG MAP OF HEADER LOGO HERE -->
+          </div>
 
           <button style="max-width:50%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
