@@ -107,6 +107,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color:#20303D !important;">
         <div class="container-fluid">
 
+          <!-- / / / / / / / / / / IMAGE -->
           <div style="max-width:50%;padding:0px !important;margin:0px !important;" class="navbar-brand">
             <!-- IMG MAP OF HEADER LOGO HERE (FROM MIVA + IMG MAP .. DYNAMIC DISABLED, removed lots of miva dynamic data tags that insert logo name and logo tagline, see lines 88-110 in originsl_header.html), so not sure mvt:if and mvt:else are even functional .. dimensions 404w 59h -->
             <!-- REPLACEMENT IMG IF .. svg not showing fix thanks to: https://stackoverflow.com/questions/58848205/responsive-svg-not-showing-full-version-at-larger-screen-sizes (added width and height to svg tag) -->
@@ -148,16 +149,26 @@
             <!-- / IMG MAP OF HEADER LOGO HERE -->
           </div>
 
+          <!-- / / / / / / / / / / 3 bar menu (FROM BS, DYNAMIC DISABLED), replaces MIVA 3 bar menu (line 84-86 in original_header.html) .. INTEGRATE MIVA DYNAMIC DATA FOR MENU HERE IF NEEDED -->
           <button style="max-width:50%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
 
-            <form class="d-flex srch_alg">
+            <!-- / / / / / / / / / / SEARCH -->
+            <!-- original bs search -->
+            <!-- <form class="d-flex srch_alg">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+            <!-- removed all miva classes in <div> below -->
+            <div id="search">
+            <form method="post" action="&mvte:urls:SRCH:rr;">
+            <mvt:item name="searchfield" />
+            <mvt:item name="buttons" param="Search" />
             </form>
+            </div>
 
             <div class="navbar-nav">
               <nav class="nav flex-column navalg">
