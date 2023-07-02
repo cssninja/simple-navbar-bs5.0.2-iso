@@ -65,6 +65,23 @@
         max-width: 100% !important;
       }
 
+      .navalg {
+        text-align:right;
+      }
+      @media (max-width: 992px) {
+        .navalg {
+          text-align:left;
+        }
+      }
+      .srch_alg {
+        padding:2% 10% 2% 10%;
+      }
+      @media (max-width: 992px) {
+        .srch_alg {
+          padding:2% 30% 2% 0%;
+        }
+      }
+
       /* right justification thanks to: https://stackoverflow.com/questions/54394243/bootstrap-4-navbar-justify-menu-to-right .. also in docs: https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content */
 
       /* lorem ipsum images thanks to: https://fakeimg.pl/ and https://github.com/Rydgel/Fake-images-please */
@@ -86,22 +103,28 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color:#253646 !important;">
         <div class="container-fluid">
 
-          <a style="max-width:50%;" class="navbar-brand" href="#"><img src="https://fakeimg.pl/404x59/465157/EAE0D0/?font_size=30&text=logo&font=lato"></a>
+          <a style="max-width:50%;" class="navbar-brand" href="#"><img src="https://fakeimg.pl/404x59/465157/EAE0D0/?font_size=18&text=logo&font=lato"></a>
 
           <button style="max-width:50%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+
+            <form class="d-flex srch_alg">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
             <div class="navbar-nav">
-
-              <!-- added <div> around <a> -->
-              <div><a class="nav-link active" aria-current="page" href="#"><img src="https://fakeimg.pl/109x35/465157/EAE0D0/?font_size=30&text=signin&font=lato"></a></div>
-              <div><a class="nav-link" href="#"><img src="https://fakeimg.pl/119x58/465157/EAE0D0/?font_size=30&text=cart&font=lato"></a></div>
-              <div><a class="nav-link" href="#"><img src="https://fakeimg.pl/372x52/465157/EAE0D0/?font_size=30&text=location&font=lato"></a></div>
-              <div><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><img src="https://fakeimg.pl/164x60/465157/EAE0D0/?font_size=30&text=approval&font=lato"></a></div>
-
+              <nav class="nav flex-column navalg">
+                <a class="nav-link" aria-current="page" href="#"><img src="https://fakeimg.pl/109x28/465157/EAE0D0/?font_size=18&text=signin&font=lato"></a>
+                <a class="nav-link" aria-current="page" href="#"><img src="https://fakeimg.pl/109x28/465157/EAE0D0/?font_size=18&text=account&font=lato"></a>
+                <a class="nav-link" aria-current="page" href="#"><img src="https://fakeimg.pl/109x28/465157/EAE0D0/?font_size=18&text=cart&font=lato"></a>
+                <a class="nav-link" aria-current="page" href="#"><img src="https://fakeimg.pl/250x28/465157/EAE0D0/?font_size=18&text=approvals&font=lato"></a>
+              </nav>
             </div>
+
           </div>
 
         </div>
